@@ -102,7 +102,7 @@ public class Floor5LinServ implements WindowListener {
         credentialsGBC.gridx = 0;
         credentialsGBC.gridy = 2;
         credentials.add(port, credentialsGBC);
-        credentialsGBC.gridx = 0;
+        credentialsGBC.gridx = 0; //
         credentialsGBC.gridy = 3;
         credentials.add(new JPanel(), credentialsGBC);
         JPanel upperLip = new JPanel();
