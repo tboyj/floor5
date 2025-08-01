@@ -104,19 +104,22 @@ public class Floor5LinServ implements WindowListener {
         credentials.add(port, credentialsGBC);
         credentialsGBC.gridx = 0; //
         credentialsGBC.gridy = 3;
-        credentials.add(new JPanel(), credentialsGBC);
+        credentials.add(Box.createVerticalGlue(), credentialsGBC);
+        credentialsGBC.gridy = 4;
+        JPanel lowerLIP = new JPanel();
+        JButton liB = new JButton("Login");
+        liB.putClientProperty(FlatClientProperties.BUTTON_TYPE, FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
+        lowerLIP.add(liB);
+        credentials.add(lowerLIP, credentialsGBC);
         JPanel upperLip = new JPanel();
         upperLip.add(new JLabel("Floor5")); // logo here?
         holder.add(upperLip);
         JPanel midHold = new JPanel();
         midHold.add(credentials);
         holder.add(midHold);
-        JPanel lowerLIP = new JPanel();
-        JButton liB = new JButton("Login");
-        liB.putClientProperty(FlatClientProperties.BUTTON_TYPE, FlatClientProperties.BUTTON_TYPE_ROUND_RECT);
-        lowerLIP.add(liB);
+
         holder.add(Box.createVerticalGlue());
-        holder.add(lowerLIP);
+
         holder.setMinimumSize(new Dimension(width-250,height-75));
         holder.setMaximumSize(new Dimension(width-250,height-75));
         holder.setPreferredSize(new Dimension(width-250,height-75));
