@@ -12,14 +12,14 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Booting Floor5...(Client Version)");
         System.out.println("Trying to initialize FlatLaF...");
-        GraphicsEnvironment ge = GraphicsEnvironment
+        /*GraphicsEnvironment ge = GraphicsEnvironment
                 .getLocalGraphicsEnvironment();
 // just trying to push it through
         Font[] allFonts = ge.getAllFonts();
 
         for (Font font : allFonts) {
             System.out.println(font.getFontName(Locale.US));
-        }
+        }*/
         try {
             FlatLaf.setGlobalExtraDefaults(Collections.singletonMap("@accentColor", "#8C2433")); // Red color
             UIManager.put( "defaultFont", new Font( "Bahnschrift", Font.PLAIN, 13) );
